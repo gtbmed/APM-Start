@@ -30,5 +30,10 @@ export class ProductListComponent {
             "imageUrl": "http://openclipart.org/image/300px/svg_to_png/58471/garden_cart.png"
         }
     ];
-    
+
+    //Methods are normally added after properties are defined
+    //Typescript does not require "function" or other keyword
+    toggleImage():void {
+        this.showImage = !this.showImage;
+    }
 }
