@@ -10,7 +10,8 @@ export class ProductListComponent {
     imageMargin: 2;
     showImage: boolean = false;
     listFilter: string = 'cart';
-    products: any[] = [{
+    products: any[] = [
+        {
             "productId": 1,
             "productName": "Leaf Rake",
             "productCode": "GDN-0011",
