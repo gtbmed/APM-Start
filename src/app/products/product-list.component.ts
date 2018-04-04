@@ -14,7 +14,7 @@ export class ProductListComponent implements OnInit {
     
     _listFilter: string;
     get listFilter(): string {
-        return this.listFilter;
+        return this._listFilter;
     }
     set listFilter(value: string) {
         this._listFilter = value;
