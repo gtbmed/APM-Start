@@ -12,6 +12,7 @@ export class ProductListComponent implements OnInit {
     imageMargin: 2;
     showImage: boolean = false;
     listFilter: string = 'cart';
+    filteredProducts: IProduct []; // If we used 'products' to filter, we'd have to get the data from the source again after each filtering
     products: IProduct[] = [
         {
             "productId": 1,
