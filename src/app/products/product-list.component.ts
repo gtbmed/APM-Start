@@ -11,7 +11,16 @@ export class ProductListComponent implements OnInit {
     imageWidth: 50;
     imageMargin: 2;
     showImage: boolean = false;
-    listFilter: string = 'cart';
+    
+    _listFilter: string;
+    get listFilter(): string {
+        return this.listFilter;
+    }
+    set listFilter(value: string) {
+        this._listFilter = value;
+        this.filteredProducts = this.listFilter ? this.performFilter(this.listFilter) : this.products; // JS conditional to consider if filtered list is empty and what to do in each case
+    }
+    
     filteredProducts: IProduct []; // If we used 'products' to filter, we'd have to get the data from the source again after each filtering
     products: IProduct[] = [
         {
@@ -35,6 +44,17 @@ export class ProductListComponent implements OnInit {
             "imageUrl": "http://openclipart.org/image/300px/svg_to_png/58471/garden_cart.png"
         }
     ];
+
+    constructor() { // set defaults for the page
+        this.filteredProducts = this.products;
+        this.listFilter = 'cart';
+    }
+
+    performFilter(filterBy: string): IProduct [] {
+        filterBy = filterBy.toLocaleLowerCase(); // change to lowercase to everything compared is lowercase
+        return this.products.filter((product: IProduct) =>
+                product.productName.toLocaleLowerCase().indexOf(filterBy) !== -1);
+    }
 
     //Methods are normally added after properties are defined
     //Typescript does not require "function" or other keyword
