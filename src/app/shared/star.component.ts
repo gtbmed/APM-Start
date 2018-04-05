@@ -7,7 +7,7 @@ import { Component, OnChanges } from "@angular/core";
 })
 
 export class StarComponent implements OnChanges{
-    rating = 4;
+    @Input() rating: number;
     starWidth: number;
 
     ngOnChanges(): void {
