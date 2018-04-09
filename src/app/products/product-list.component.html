@@ -45,7 +45,9 @@
                         <td>{{ product.productCode | lowercase | convertToSpaces: '-'}}</td>
                         <td>{{ product.releasteDate }}</td>
                         <td>{{ product.price | currency : 'USD' : true: '1.2-2' }}</td>
-                        <td><pm-star [rating]='product.starRating'></pm-star></td> <!-- Gets starRating info from the product list component and sends it to the rating in the star component -->
+                        <td><pm-star [rating]='product.starRating'>
+                            (ratingClicked)</pm-star>
+                        </td> <!-- Gets starRating info from the product list component and sends it to the rating in the star component -->
                     </tr>
                 </tbody>
             </table>
