@@ -26,7 +26,7 @@ export class ProductListComponent implements OnInit {
     products: IProduct[] = {}];
 
     constructor(private _productService: ProductService) { // set defaults for the page
-        this.listFilter = 'cart';
+    
     }
 
     performFilter(filterBy: string): IProduct [] {
