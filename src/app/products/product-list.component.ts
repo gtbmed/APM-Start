@@ -26,7 +26,6 @@ export class ProductListComponent implements OnInit {
     products: IProduct[] = {}];
 
     constructor(private _productService: ProductService) { // set defaults for the page
-        this.filteredProducts = this.products;
         this.listFilter = 'cart';
     }
 
@@ -43,6 +42,7 @@ export class ProductListComponent implements OnInit {
     }
     ngOnInit(): void {
         this.products = this._productService.getProducts();
+        this.filteredProducts = this.products;
     }
     onRatingClicked(message: string): void {
         this.pageTitle = 'Product List: ' + message;
