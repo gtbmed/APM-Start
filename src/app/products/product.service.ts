@@ -4,7 +4,7 @@ import { IProduct } from "./product";
 @Injectable
 export class ProductService {
 
-    getProducts(): IProduct {
+    getProducts(): IProduct[] {
         return;
     }
 }
