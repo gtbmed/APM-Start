@@ -8,7 +8,7 @@ export class ProductService {
     private _productUrl = './api/products/products.json';
     constructor(private _http: HttpClient) {}
 
-    getProducts(): IProduct[] {
-        return 
+    getProducts(): Observable<IProduct[]> {
+        return this._http.get<IProduct[]>(this._productUrl);
     }
 }
