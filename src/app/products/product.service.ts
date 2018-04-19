@@ -13,8 +13,12 @@ export class ProductService {
 
     getProducts(): Observable<IProduct[]> {
         return this._http.get<IProduct[]>(this._productUrl)
+        .do(data => console.log('All: ' + JSON.stringify(data)))
         .catch(this.handleError);
     }
 
-    private handleError(err: HttpErrorResponse){}
+    private handleError(err: HttpErrorResponse){
+        console.log(err.message);
+        return Observable.throw(err.message);
+    }
 }
