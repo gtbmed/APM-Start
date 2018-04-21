@@ -23,7 +23,7 @@ export class ProductListComponent implements OnInit {
     }
     
     filteredProducts: IProduct []; // If we used 'products' to filter, we'd have to get the data from the source again after each filtering
-    products: IProduct[] = {};
+    products: IProduct[] = {}];
 
     constructor(private _productService: ProductService) { // set defaults for the page
     
