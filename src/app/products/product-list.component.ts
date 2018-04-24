@@ -43,9 +43,11 @@ export class ProductListComponent implements OnInit {
     }
     ngOnInit(): void {
         this._productService.getProducts()
-            .subscribe(products => this.products = products,
+            .subscribe(products => {
+                this.products = products;
+                this.filteredProducts = this.products;
+            },
             error => this.errorMessage = <any>error);
-        this.filteredProducts = this.products;
     }
     onRatingClicked(message: string): void {
         this.pageTitle = 'Product List: ' + message;
