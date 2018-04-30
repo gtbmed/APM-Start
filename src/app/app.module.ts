@@ -12,9 +12,7 @@ import { StarComponent } from './shared/star.component';
     AppComponent,
     ProductListComponent,
     ConvertToSpacesPipe,
-    StarComponent,
-    ProductDetail.ComponentComponent,
-    ProductDetailComponent
+    StarComponent
   ],
   imports: [
     BrowserModule,
