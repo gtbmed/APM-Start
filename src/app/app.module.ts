@@ -24,7 +24,8 @@ import { WelcomeComponent } from './home/welcome.component';
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot([
-      
+      { path : 'products' , component: ProductListComponent},
+      { path : 'product/:id', component: ProductDetailComponent}
     ])
   ],
   providers: [],
