@@ -27,7 +27,8 @@ import { WelcomeComponent } from './home/welcome.component';
       { path: 'products' , component: ProductListComponent},
       { path: 'product/:id', component: ProductDetailComponent},
       { path: 'welcome', component: WelcomeComponent},
-      { path: '', redirectTo: 'welcome', pathMatch: 'full'}
+      { path: '', redirectTo: 'welcome', pathMatch: 'full'},
+      { path: '**', redirectTo: 'welcome', pathMatch: 'full'}
     ])
   ],
   providers: [],
