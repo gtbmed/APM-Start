@@ -23,7 +23,9 @@ import { WelcomeComponent } from './home/welcome.component';
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    RouterModule
+    RouterModule.forRoot([
+      
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
