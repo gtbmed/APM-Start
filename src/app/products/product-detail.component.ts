@@ -27,4 +27,8 @@ export class ProductDetailComponent implements OnInit {
     }
   }
 
+  onBack(): void {
+    this._router.navigate(['/prodcuts']);
+  }
+
 }
