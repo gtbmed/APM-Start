@@ -11,7 +11,12 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     FormsModule,
-    RouterModule
+    RouterModule.forChild([
+      { path: 'products' , component: ProductListComponent},
+      { path: 'products/:id', 
+      canActivate: [ ProductGuardService ],
+      component: ProductDetailComponent}
+    ])
   ],
   declarations: [
     ProductListComponent,
