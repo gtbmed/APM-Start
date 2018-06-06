@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ProductGuardService } from './product-guard.service';
 import { ProductService } from './product.service';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
@@ -18,7 +19,8 @@ import { ProductService } from './product.service';
       { path: 'products/:id', 
       canActivate: [ ProductGuardService ],
       component: ProductDetailComponent}
-    ])
+    ]),
+    SharedModule
   ],
   declarations: [
     ProductListComponent,
