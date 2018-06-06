@@ -11,10 +11,6 @@ import { ProductModule } from './products/product.module';
 @NgModule({
   declarations: [
     AppComponent,
-    ProductListComponent,
-    ConvertToSpacesPipe,
-    StarComponent,
-    ProductDetailComponent,
     WelcomeComponent
   ],
   imports: [
